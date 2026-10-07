@@ -1,0 +1,19 @@
+{
+ "name": "Owner Claim Group",
+ "short_name": "Owner Claim",
+ "icons": [
+  {
+   "src": "/apple-touch-icon.png",
+   "sizes": "180x180",
+   "type": "image/png"
+  },
+  {
+   "src": "/favicon.svg",
+   "sizes": "any",
+   "type": "image/svg+xml"
+  }
+ ],
+ "theme_color": "#070D18",
+ "background_color": "#070D18",
+ "display": "browser"
+}
