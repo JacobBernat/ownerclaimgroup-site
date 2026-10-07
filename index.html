@@ -104,7 +104,7 @@
     <div class="stats">
       <div class="stat reveal"><span class="stat-n"><span data-count="665.9" data-decimals="1" data-prefix="$" data-suffix="M">$665.9M</span></span><span class="stat-l">listed in Wisconsin's unclaimed property file</span></div>
       <div class="stat reveal"><span class="stat-n"><span data-count="736429" data-sep="1">736,429</span></span><span class="stat-l">records in that one state's file</span></div>
-      <div class="stat reveal"><span class="stat-n"><span data-count="7">7</span></span><span class="stat-l">states where we file claims today</span></div>
+      <div class="stat reveal"><span class="stat-n"><span data-count="8">8</span></span><span class="stat-l">states we serve today</span></div>
       <div class="stat reveal"><span class="stat-n">$0</span><span class="stat-l">owed to us unless the state pays you</span></div>
     </div>
     <p class="source reveal">Wisconsin figures from the Wisconsin Department of Revenue's unclaimed property file, October 2026.</p>
@@ -170,7 +170,7 @@
       <article class="tile reveal" data-glow id="fees">
         <span class="tile-k">Fees</span>
         <h3>One fee, in writing, capped by law.</h3>
-        <p>Agreed before we file and never above your state's legal limit, for example 15% in New York and 10% in Wisconsin.</p>
+        <p>Agreed before we file and never above your state's legal limit, for example 15% in New York, 10% in California and 10% in Wisconsin.</p>
       </article>
       <article class="tile reveal" data-glow>
         <span class="tile-k">Payment</span>
@@ -254,13 +254,14 @@
       <h2 id="states-title">States we serve.</h2>
       <p class="lead">Each state has its own rules, and we follow every one of them.</p>
     </div>
-    <ul class="state-grid"><li class="st reveal" style="--i:0"><span class="st-abbr">WI</span><span class="st-name">Wisconsin</span></li>
-<li class="st reveal" style="--i:1"><span class="st-abbr">NY</span><span class="st-name">New York</span></li>
-<li class="st reveal" style="--i:2"><span class="st-abbr">NJ</span><span class="st-name">New Jersey</span></li>
-<li class="st reveal" style="--i:3"><span class="st-abbr">CO</span><span class="st-name">Colorado</span></li>
-<li class="st reveal" style="--i:4"><span class="st-abbr">NV</span><span class="st-name">Nevada</span></li>
-<li class="st reveal" style="--i:5"><span class="st-abbr">AK</span><span class="st-name">Alaska</span></li>
-<li class="st reveal" style="--i:6"><span class="st-abbr">WY</span><span class="st-name">Wyoming</span></li></ul>
+    <ul class="state-grid"><li class="st reveal" style="--i:0"><span class="st-abbr">NY</span><span class="st-name">New York</span></li>
+<li class="st reveal" style="--i:1"><span class="st-abbr">CA</span><span class="st-name">California</span></li>
+<li class="st reveal" style="--i:2"><span class="st-abbr">WI</span><span class="st-name">Wisconsin</span></li>
+<li class="st reveal" style="--i:3"><span class="st-abbr">NJ</span><span class="st-name">New Jersey</span></li>
+<li class="st reveal" style="--i:4"><span class="st-abbr">CO</span><span class="st-name">Colorado</span></li>
+<li class="st reveal" style="--i:5"><span class="st-abbr">NV</span><span class="st-name">Nevada</span></li>
+<li class="st reveal" style="--i:6"><span class="st-abbr">AK</span><span class="st-name">Alaska</span></li>
+<li class="st reveal" style="--i:7"><span class="st-abbr">WY</span><span class="st-name">Wyoming</span></li></ul>
     <p class="states-note reveal">Live somewhere else? Money is often held where the company was based, not where you live. <a href="#contact">Ask us to check.</a></p>
   </div>
 </section>
@@ -303,6 +304,24 @@
   <div class="wrap cta-inner">
     <h2 id="cta-title" class="reveal">Let's find <span class="serif gold-text">what's yours.</span></h2>
     <p class="reveal">Send us your name or business name, plus any former names. A real person will check and tell you what we find. Asking is free and commits you to nothing.</p>
+    <form class="cform reveal" id="cform" novalidate>
+      <div class="cf-row"><label for="cf-name">Your name or business name</label><input id="cf-name" name="name" autocomplete="name" required maxlength="120"></div>
+      <div class="cf-two">
+        <div class="cf-row"><label for="cf-phone">Phone</label><input id="cf-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="40"></div>
+        <div class="cf-row"><label for="cf-email">Email</label><input id="cf-email" name="email" type="email" inputmode="email" autocomplete="email" maxlength="160"></div>
+      </div>
+      <div class="cf-two">
+        <div class="cf-row"><label for="cf-state">State</label><select id="cf-state" name="state"><option value="">Not sure</option><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option><option value="DE">Delaware</option><option value="DC">District of Columbia</option><option value="GA">Georgia</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option></select></div>
+        <div class="cf-row"><label for="cf-about">This is about</label><select id="cf-about" name="about"><option value="person">Me</option><option value="business">My business</option><option value="estate">A family member's estate</option></select></div>
+      </div>
+      <div class="cf-row"><label for="cf-msg">Anything we should know? <span>Optional. Former names or addresses help.</span></label><textarea id="cf-msg" name="message" rows="3" maxlength="2000"></textarea></div>
+      <div class="cf-hp" aria-hidden="true"><label for="cf-web">Leave this empty</label><input id="cf-web" name="website" tabindex="-1" autocomplete="off"></div>
+      <label class="cf-check"><input type="checkbox" name="consent" id="cf-consent"><span>It's OK to call or text me about this request. Message and data rates may apply. Reply STOP to stop texts.</span></label>
+      <p class="cf-note">Please don't send your Social Security number or bank details. We never ask for them here.</p>
+      <button class="btn btn-gold btn-lg cf-send" type="submit">Ask us to check, free</button>
+      <p class="cf-status" id="cf-status" role="status" aria-live="polite"></p>
+    </form>
+    <p class="cta-or reveal">Or reach us directly</p>
     <div class="cta-actions reveal">
       <a class="btn btn-gold btn-lg" href="tel:+13322306032">Call (332) 230-6032</a>
       <a class="btn btn-glass btn-lg" href="mailto:info@ownerclaimgroup.com?subject=Please%20check%20for%20unclaimed%20money">Email info@ownerclaimgroup.com</a>

@@ -122,3 +122,30 @@
     });
   });
 })();
+
+// contact form -> Owner Claim Group back office (Oct 7 2026)
+(function(){
+  var f=document.getElementById('cform'); if(!f) return;
+  var API='https://ocg-backoffice.sites.tab.bot/api/public/inquiry';
+  var st=document.getElementById('cf-status'), btn=f.querySelector('.cf-send');
+  function say(t,k){st.textContent=t;st.className='cf-status '+(k||'');}
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var g=function(n){var el=f.elements[n];return el?String(el.value||'').trim():'';};
+    [].forEach.call(f.querySelectorAll('.cf-bad'),function(x){x.classList.remove('cf-bad');});
+    var name=g('name'),phone=g('phone'),email=g('email');
+    if(name.length<2){f.elements.name.classList.add('cf-bad');f.elements.name.focus();return say('Please type your name.','err');}
+    if(!phone&&!email){f.elements.phone.classList.add('cf-bad');f.elements.phone.focus();return say('Please give us a phone number or an email so we can reply.','err');}
+    if(email&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){f.elements.email.classList.add('cf-bad');f.elements.email.focus();return say('That email address looks incomplete.','err');}
+    if(phone&&phone.replace(/\D/g,'').length<10){f.elements.phone.classList.add('cf-bad');f.elements.phone.focus();return say('Please type a full phone number with area code.','err');}
+    btn.disabled=true; say('Sending…');
+    var data={name:name,phone:phone,email:email,state:g('state'),about:g('about'),message:g('message'),website:g('website'),consent:!!f.elements.consent.checked,page:location.pathname};
+    fetch(API,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(data)})
+      .then(function(r){return r.json().catch(function(){return {ok:false};});})
+      .then(function(j){
+        if(j&&j.ok){f.classList.add('sent');say('Thank you, '+name.split(' ')[0]+'. We got your request. A person from our team will get back to you soon.','ok');}
+        else{btn.disabled=false;say((j&&j.error)||'That didn\'t go through. Please call (332) 230-6032 or email info@ownerclaimgroup.com.','err');}
+      })
+      .catch(function(){btn.disabled=false;say('That didn\'t go through. Please call (332) 230-6032 or email info@ownerclaimgroup.com.','err');});
+  });
+})();
