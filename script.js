@@ -123,10 +123,10 @@
   });
 })();
 
-// contact form -> Owner Claim Group back office (Oct 7 2026)
+// contact form -> Owner Claim Group (secure.ownerclaimgroup.com; Oct 15 2026)
 (function(){
   var f=document.getElementById('cform'); if(!f) return;
-  var API='https://ownerclaim-portal.sites.tab.bot/api/public/inquiry';
+  var API='https://secure.ownerclaimgroup.com/api/public/inquiry';
   var st=document.getElementById('cf-status'), btn=f.querySelector('.cf-send');
   function say(t,k){st.textContent=t;st.className='cf-status '+(k||'');}
   f.addEventListener('submit',function(e){
